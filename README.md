@@ -20,8 +20,8 @@ This action will:
 
 ## Sample Workflow section
 ```
-    - name: notify-tests
-      uses: neochae1/upload-test-result@@v1.0.0
+    - name: JUnit Slack Reporter with Coverage
+      uses: neochae1/upload-test-result@v1.0.0
       env:
         JUNIT_TEST_RESULTS: build/test-results/test
         JACOCO_REPORTS: build/reports/jacoco/test/jacocoTestReport.xml
