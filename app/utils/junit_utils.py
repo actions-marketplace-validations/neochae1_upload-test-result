@@ -123,7 +123,7 @@ def get_slack_junit_message(title, reports):
         slack_message = slack_message.replace('TEMPLATE_COLOR', '#3CB371')
     
     total_tested = int(reports['tests'])
-    reports['tests'] = total_tested - int(reports['failures']) - int(reports['skipped'])
+    reports['tests'] = str(total_tested - int(reports['failures']) - int(reports['skipped']))
     slack_message = slack_message.replace('TEMPLATE_TOTAL', str(total_tested))
 
     for factor in template_rule:
